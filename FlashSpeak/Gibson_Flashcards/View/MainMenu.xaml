@@ -1,0 +1,48 @@
+﻿<Window x:Class="Gibson_Flashcards.View.MainMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gibson_Flashcards.View"
+        xmlns:viewmodel="clr-namespace:Gibson_Flashcards.ViewModel"
+        mc:Ignorable="d"
+        Title="Main Menu" Height="300" Width="300">
+    <Window.DataContext>
+        <viewmodel:MainViewModel />
+    </Window.DataContext>
+    <Grid>
+        <TextBlock
+            x:Name="TitleTextBlock"
+            Text="Flashcards"
+            FontSize="20"
+            TextAlignment="Center"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Margin="0,0,0,200"/>
+        <Button
+            x:Name="NewSetButton"
+            Content="Create New Set"
+            Height="20"
+            Width="140"
+            HorizontalAlignment="Center"
+            Command="{Binding CreateSetCommand}"
+            Margin="20,0,20,0"/>
+        <Button
+            x:Name="StudyMenuButton"
+            Content="Study"
+            Height="20"
+            Width="140"
+            HorizontalAlignment="Center"
+            Command="{Binding StudyCommand}"
+            Margin="20,0,20,80"/>
+        <Button
+            x:Name="ExitButton"
+            Content="Exit Program"
+            Height="20"
+            Width="140"
+            HorizontalAlignment="Center"
+            Click="CloseApplication"
+            Command="{Binding ExitProgramCommand}"
+            Margin="20,0,20,-180"/>
+    </Grid>
+</Window>

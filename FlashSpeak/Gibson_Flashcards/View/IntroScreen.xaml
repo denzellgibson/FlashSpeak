@@ -1,0 +1,34 @@
+﻿<Window x:Class="Gibson_Flashcards.View.IntroScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gibson_Flashcards.View"
+        mc:Ignorable="d"
+        Title="IntroScreen" Height="300" Width="300">
+    <Grid>
+        <TextBlock
+            x:Name="TitleName"
+            Text="Welcome to Japanese Flashcards!"
+            FontSize="18"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Margin="0,0,0,220"/>
+        <TextBlock
+            x:Name="InstructionTextBlock"
+            Text="For newcomers, start by creating a new set of flashcards. Returning users can jump to studying by choosing their card set. Press Start to begin."
+            FontSize="12"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Margin="0,0,0,100"
+            TextWrapping="Wrap"/>
+        <Button
+            x:Name="StartButton"
+            Content="Start!"
+            HorizontalAlignment="Center"
+            Width="100"
+            Height="25"
+            Margin="0,100,0,0"
+            Click="CloseWindow"/>
+    </Grid>
+</Window>
